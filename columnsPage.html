@@ -11,19 +11,45 @@
                 padding: 30px;
                 font-size: 150%;
             }
+            .maincontainer{
+                display:table;
+                width: 100%;
+            }
             .lefcol{
-                float: left;
+                background-color: aqua;
                 width: 25%;
                 padding: 20px;
                 border-style: groove;
+                display:table-cell;
             }
             .maincontent{
+                background-color: goldenrod;
                 width: 50%;
                 padding: 20px;
                 border-style: groove;
-                float: left;
+                display: table-cell;
+                
             }
-            
+            .rightcol{
+                float: right;
+                background-color: plum;
+                width: 25%;
+                padding: 20px;
+                border-style: groove;
+                display: table-cell;
+
+            }
+
+            .maincontainer:after{
+                content: "";
+                display: table;
+                clear: both;
+                
+            }
+            .footer{
+                text-align: right;
+            }
+
         </style>
 
 
