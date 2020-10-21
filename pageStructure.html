@@ -1,8 +1,97 @@
 !DOCTYPE html>
 <html lang="en">
     <head>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+            }
+            h1{
+                color:#66FCF1;
+                text-align: center;
+                font: bold 200% fantasy;
+            }
+            .header{
+                background-color: #0B0C10;
+                padding: 20px;
+                text-align: center;
+            }
+            .Navigation a:active{
+                border-bottom: 3px #66FCF1;
+            }
+            .Navigation{
+                overflow: hidden;
+                background-color: #0B0C10;
+                border: #66FCF1;
+            }
+            .Navigation a{
+                float:left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                
+                text-decoration: none;
+                
+            }
+            .Navigation a:hover{
+                border-bottom: 3px #66FCF1;
+                
+            }
+            /*ul{
+                list-style-type: none;
+                margin: 0;
+                width: 200px;
+                background-color: #f1f1f1;
+
+            }
+            li a{
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover{
+                background-color: #555;
+                color: white;
+            }*/
+
+            .column{
+                float: left;
+                width: 33.33%;
+                padding: 15px;
+
+            }
+            .row::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            @media screen and (max-width: 600px) {
+                .column{
+                    width: 100%;
+                }
+            }
+        </style>
         <meta charset="utf-8">
-        <title>This is a title</title>
+        
+    </head>
+    <body>
+        <div class="header">
+            <h1>Adam Dare's Website</h1>
+        </div>
+
+        <div class="Navigation">
+            <a href="index.html">Home</a>
+            <a href="pageStructure.html">Page Structure</a>
+            <a href="cssExternalTrial.html">External Trial</a>
+            <a href="classElements.html">Class Elements</a>
+            <a href="columnsPage.html">Columns Page</a>
+
+            <!--<title>This is a title</title>
         <h1>This is heading 1</h1>
         <h2>This is heading 2</h2>
         <h3>This is heading 3</h3>
@@ -10,5 +99,7 @@
         <i>This is Italic Text</i>
         <li>This is for a list</li>
         <ol>This is an ordered list</ol>
-        <ul>This is an unordered list</ul>
-    </head>
+        <ul>This is an unordered list</ul>-->
+            
+        </div>
+    </body>
