@@ -32,6 +32,23 @@
                 background-color: #555;
                 color: white;
             }
+
+            .column{
+                float: left;
+                width: 33.33%;
+                padding: 15px;
+
+            }
+            .row::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            @media screen and (max-width: 600px) {
+                .column{
+                    width: 90%;
+                }
+            }
         </style>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,intial-scale=1">
@@ -50,7 +67,20 @@
             <li><a href="columnsPage.html">Columns Page</a><li>
         </ul>
         
-        
+        <div class="row">
+            <div class="column">
+                <h2>Column 1</h2>
+                <p>This is column 1</p>
+            </div>
+
+            <div class="column">
+                <p>This is column 2</p>
+            </div>
+
+            <div class="column">
+                <p>This is column 3</p>
+            </div>
+        </div>
         <!--... This is the what will appear on the website-->
         
         
