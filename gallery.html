@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            
+            body{
+                margin: 0;
+            }
+            h1{
+                color:#66FCF1;
+                text-align: center;
+                font: bold 200% fantasy;
+            }
+            .header{
+                background-color: #0B0C10;
+                padding: 20px;
+                text-align: center;
+            }
+            .Navigation{
+                width: 100%;
+                overflow: hidden;
+                background-color: #0B0C10;
+                
+            }
+            .Navigation a.active{
+                border-bottom: 3px #66FCF1;
+            }
+            
+
+            .Navigation a{
+                float:left;
+                display: block;
+                color: aqua;                
+                font-size: 17px;
+                width: 16.66666666666667%;
+               
+                text-align: center;
+                padding: 14px 16px;
+                border-bottom: 3px #66FCF1;
+                
+                text-decoration: none;
+                
+            }
+            .Navigation a:hover{
+                border-bottom: 3px solid aqua;
+                
+            }
+            .Navigation a.active{
+                border-bottom: 3px solid aqua;
+            }
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #0B0C10;
+            }
+
+
+            .dropbtn{
+                background-color: #0B0C10;
+                color: aqua;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+            .dropdown{
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content{
+                display:none;
+                position:absolute;
+                background-color: #0B0C10;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a{
+                color: aqua;
+                padding: 12px 16px;
+                text-decoration: none;
+                display:block;
+            }
+            .dropdown-content a:hover{background-color:#0B0C10}
+            .dropdown:hover .dropdown-content{
+                display: block;
+            }
+            .dropdown:hover .dropbtn{
+                border-bottom: 3px solid aqua;
+            }
+
+            div.gallery{
+                margin:5px;
+                border: 1px solid #ccc;
+                float: left;
+                width: 180px;
+            }
+            div.gallery:hover{
+                border: 1px solid #777;
+            }
+            div.gallery img{
+                width:100%;
+                height: auto;
+            }
+            div.desc{
+                padding: 15px;
+                text-align: center;
+            }
+
+           
+            
+
+          
+
+            /*ul{ Creates a vertical navigation bar
+                list-style-type: none;
+                margin: 0;
+                width: 200px;
+                background-color: #f1f1f1;
+
+            }
+            li a{
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover{
+                background-color: #555;
+                color: white;
+            }*/
+
+            .column{
+                float: left;
+                width: 33.33%;
+                padding: 15px;
+
+            }
+            .row::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            @media screen and (max-width: 600px) {
+                .Navigation a{
+                    float:none;
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                }
+                .column{
+                    width: 100%;
+                }
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1">
+        <title>My Page</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Adam Dare's Website</h1>
+        </div>
+        <ul>
+            <li class="Navigation">
+            <li class="dropdown">
+        </ul>
+
+        <div class="Navigation">
+            <a href="index.html">Home</a>
+            <a href="pageStructure.html">Page Structure</a>
+            <a href="cssExternalTrial.html">External Trial</a>
+            <a href="classElements.html">Class Elements</a>
+            <a href="columnsPage.html">Columns Page</a>
+            
+
+            <div class="dropdown">
+                <button class="dropbtn">DropDown</button>
+                <div class="dropdown-content">
+                    <a href="#">link 1</a>
+                    <a href="#">link 2</a>
+                    <a href="#">link 3</a>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+
+        <div style="padding-left:16px">
+        <div class="gallery">
+            <a target="_blank" href="Mclaren f1 picture.png">
+                <img src="Mclaren f1 picture.png" alt="Mclaren F1" width="600" height="400">
+            </a>
+            <div class="desc">Mclaren F1 picture photoshopped in Gimp</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="houghton hall finished.png">
+                    <img src="houghton hall finished.png" alt="Houhton Hall " width="600" height="400">
+            </a>
+            <div class="desc">Houghton Hall photoshopped in Gimp</div>
+        </div>
+  </body>
+</div>
