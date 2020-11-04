@@ -52,43 +52,53 @@
             .Navigation a.active{
                 border-bottom: 3px solid aqua;
             }
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #0B0C10;
+            }
 
+
+            .dropbtn{
+                background-color: #0B0C10;
+                color: aqua;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
             .dropdown{
                 position: relative;
                 display: inline-block;
             }
             .dropdown-content{
-                display: none;
+                display:none;
                 position:absolute;
                 background-color: #0B0C10;
-                min-width: 16.6667%;
+                min-width: 160px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                 z-index: 1;
             }
-            .dropdown .dropbtn{
-                font-size: 17px;
-                border:none;
+            .dropdown-content a{
                 color: aqua;
-                padding: 14px 16px;
-                background-color: #0B0C10;
-                margin: 0;
-                
-            }
-             .dropdown:hover .dropbtn{
-                border-bottom: 3px solid aqua;
-            }
-            
-            .dropdown-content{
-                float: none;
-                color: black;
                 padding: 12px 16px;
                 text-decoration: none;
-                display: block;
-                text-align: left;
+                display:block;
             }
-            .dropdown-content:hover .dropdown-content{
+            .dropdown-content a:hover{background-color:#0B0C10}
+            .dropdown:hover .dropdown-content{
                 display: block;
             }
+            .dropdown:hover .dropbtn{
+                border-bottom: 3px solid aqua;
+            }
+
+            
+
+           
+            
 
           
 
@@ -142,6 +152,10 @@
         <div class="header">
             <h1>Adam Dare's Website</h1>
         </div>
+        <ul>
+            <li class="Navigation">
+            <li class="dropdown">
+        </ul>
 
         <div class="Navigation">
             <a href="index.html">Home</a>
@@ -149,14 +163,16 @@
             <a href="cssExternalTrial.html">External Trial</a>
             <a href="classElements.html">Class Elements</a>
             <a href="columnsPage.html">Columns Page</a>
-            <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+            
 
+            <div class="dropdown">
+                <button class="dropbtn">DropDown</button>
+                <div class="dropdown-content">
+                    <a href="#">link 1</a>
+                    <a href="#">link 2</a>
+                    <a href="#">link 3</a>
                 </div>
+            </div>
             </div>
             
         </div>
