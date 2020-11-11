@@ -96,11 +96,10 @@
             }
 
             div.gallery{
-                margin:5px;
                 border: 1px solid #ccc;
-                float: left;
-                width: 180px;
+                
             }
+            
             div.gallery:hover{
                 border: 1px solid #777;
             }
@@ -111,6 +110,14 @@
             div.desc{
                 padding: 15px;
                 text-align: center;
+            }
+            *{
+                box-sizing: border-box;
+            }
+            .responsive{
+                padding: 0 6px;
+                float:left;
+                width: 24.99999%;
             }
 
            
@@ -159,6 +166,24 @@
                     width: 100%;
                 }
             }
+            @media only screen and(max-width: 600px){
+                .responsive{
+                    width: 50%;
+                    margin: 6px 0;
+
+                }
+            }
+            @media only screen and (max-width: 500px){
+                .responsive{
+                    width: 100%;
+                }
+            }
+            .clearfix::after{
+                content:"";
+                display: table;
+                clear: both;
+
+            }
             .opacityHover{
                 opacity: 0.5;
             }
@@ -200,56 +225,77 @@
         </div>
 
         <div style="padding-left:16px">
-        <div class="gallery">
-            <a target="_blank" href="Mclaren f1 picture.png">
-                <img src="Mclaren f1 picture.png" alt="Mclaren F1" width="600" height="400">
-            </a>
-            <div class="desc">Mclaren F1 picture photoshopped in Gimp</div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="Mclaren f1 picture.png">
+                    <img src="Mclaren f1 picture.png" alt="Mclaren F1" width="600" height="400">
+                </a>
+                <div class="desc">Mclaren F1 picture photoshopped in Gimp</div>
+            </div>
+
         </div>
 
-        <div class="gallery">
-            <a target="_blank" href="houghton hall finished.png">
-                    <img src="houghton hall finished.png" alt="Houhton Hall " width="600" height="400">
-            </a>
-            <div class="desc">Houghton Hall photoshopped in Gimp</div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="houghton hall finished.png">
+                        <img src="houghton hall finished.png" alt="Houhton Hall " width="600" height="400">
+                </a>
+                <div class="desc">Houghton Hall photoshopped in Gimp</div>
+            </div>
+        </div>
+        
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="postman pat.gif">
+                        <img src="postman pat.gif" alt="Postman pat" width="600" height="400">
+                </a>
+                <div class="desc">Postman pat</div>
+            </div>
+
         </div>
 
-        <div class="gallery">
-            <a target="_blank" href="postman pat.gif">
-                    <img src="postman pat.gif" alt="Postman pat" width="600" height="400">
-            </a>
-            <div class="desc">Postman pat</div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="lakeMountain.jpg">
+                    <div class="opacityHover">
+                        <img src="lakeMountain.jpg" alt="LakeMountain" width="600" height="400">
+                    </div>
+                </a>
+                <div class="desc">Lake Mountain</div>
+                
+            </div>
         </div>
 
-        <div class="gallery">
-            <a target="_blank" href="lakeMountain.jpg">
-                <div class="opacityHover">
-                    <img src="lakeMountain.jpg" alt="LakeMountain" width="600" height="400">
-                </div>
-            </a>
-            <div class="desc">Lake Mountain</div>
-            
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="cool-landscape-1.jpg">
+                    <div class="opacityHover">
+                        <img src="cool-landscape-1.jpg" alt="Planet" width="600" height="400">
+                    </div>
+                </a>
+                <div class="desc">Planet</div>
+                
+            </div>
         </div>
 
-        <div class="gallery">
-            <a target="_blank" href="cool-landscape-1.jpg">
-                <div class="opacityHover">
-                    <img src="cool-landscape-1.jpg" alt="Planet" width="600" height="400">
-                </div>
-            </a>
-            <div class="desc">Planet</div>
-            
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="cool-landscape-10-900x700.jpg">
+                    <div class="opacityHover">
+                        <img src="cool-landscape-10-900x700.jpg" alt="Rolling hills" width="600" height="400">
+                    </div>
+                </a>
+                <div class="desc">Rolling Hills</div>
+                
+            </div>
         </div>
 
-        <div class="gallery">
-            <a target="_blank" href="cool-landscape-10-900x700.jpg">
-                <div class="opacityHover">
-                    <img src="cool-landscape-10-900x700.jpg" alt="Rolling hills" width="600" height="400">
-                </div>
-            </a>
-            <div class="desc">Rolling Hills</div>
-            
-        </div>
+        
+
+        
+
+    
         
   </body>
 </div>
