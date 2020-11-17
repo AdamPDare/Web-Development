@@ -114,24 +114,11 @@
                 color: white;
             }*/
 
-            .column1{
+            
+            .column{
                 float: left;
                 width: 33.33%;
                 padding: 15px;
-                
-
-            }
-            .column2{
-                float: left;
-                width: 33.33%;
-                padding: 15px;
-
-            }
-            .column3{
-                float: left;
-                width: 33.33%;
-                padding: 15px;
-
             }
             .row::after{
                 content: "";
@@ -145,14 +132,8 @@
                     width: 100%;
                     text-align: left;
                 }
-                .column1{
-                    width: 33.33333333333333%;
-                }
-                .column2{
-                    width: 33.33333333333333%;
-                }
-                .column3{
-                    width: 33.33333333333333%;
+                .column{
+                    width: 100%;
                 }
             }
         </style>
@@ -213,16 +194,18 @@
         </ul>-->
         
         <div class="row">
-            <div class="column1">
+            <div class="column">
                 <h2>Column 1</h2>
                 <p>This is column 1</p>
             </div>
 
-            <div class="column2">
+            <div class="column">
+                <h2>Column 2</h2>
                 <p>This is column 2</p>
             </div>
 
-            <div class="column3">
+            <div class="column">
+                <h2>Column 3</h2>
                 <p>This is column 3</p>
             </div>
         </div>
