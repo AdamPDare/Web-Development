@@ -6,6 +6,11 @@
             *{
                 box-sizing: border-box;
             }
+            code{
+                font-family: monospace;
+                color: chocolate;
+            }
+        
             
             body{
                 margin: 0;
@@ -207,9 +212,34 @@
                     to set the maximum width of the screen and so that the 
                     column positioning is affected by the size of the window
                     making the webpage more compatible with mobile devices.
-                    
-
+                
                 </p>
+                <code>
+                    &lt;h3&gt;Code Extract&lt;/h3&gt;<br>
+                    &lt;style&gt;<br>
+                    code{ <br>
+                        .columnn{
+                            float:left;
+                            width:33.33%;
+                            padding: 15px;
+                        }
+                        
+                        .row::after{
+                            content:"";
+                            display:table;
+                            clear:both;
+                        }
+
+                        @mediascreen and (max-width: 600px){
+                            .column{
+                                width: 100%;
+                            }
+
+                        }
+
+
+                    }
+                </code>
             </div>
 
             <div class="column">
