@@ -9,6 +9,7 @@
             code{
                 font-family: monospace;
                 color: chocolate;
+                
             }
         
             
@@ -212,38 +213,44 @@
                     to set the maximum width of the screen and so that the 
                     column positioning is affected by the size of the window
                     making the webpage more compatible with mobile devices.
+                    Therefore, when the window is a specific size the columns
+                    and the navigation bar becomes vertical.
                 
                 </p>
                 <code>
                     &lt;h3&gt;Code Extract&lt;/h3&gt;<br>
                     &lt;style&gt;<br>
-                    code{<br>
-                            .columnn{<br>
-                                float:left;<br>
-                                width:33.33%;<br>
-                                padding: 15px;<br>
-                            }<br>
+                    <pre>
+                        code{
                                 
-                            .row::after{<br>
-                                content:"";<br>
-                                display:table;<br>
-                                clear:both;<br>
-                            }<br>
-        
-                            @mediascreen and (max-width: 600px){<br>
-                                .column{<br>
-                                width: 100%;<br>
-                            }<br>
-                        }<br>
-        
-                    &lt;style&gt; <br>
-                    
-                    
+                            .columnn{
+                                float:left;
+                                width:33.33%;
+                                padding: 15px;
+                            }
+                                    
+                            .row::after{
+                                content:"";
+                                display:table;
+                                clear:both;
+                            }
+            
+                            @mediascreen and (max-width: 600px){
+                                .column{
+                                width: 100%;
+                            }
+                        }
+                            
+                            
+                                
                         
+                   
 
-
-                    }
-                </code>
+                    </pre>
+                    &lt;style&gt;<br>
+                
+                </code>    
+                
             </div>
 
             <div class="column">
