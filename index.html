@@ -217,25 +217,29 @@
                 <code>
                     &lt;h3&gt;Code Extract&lt;/h3&gt;<br>
                     &lt;style&gt;<br>
-                    code{ <br>
-                        .columnn{
-                            float:left;
-                            width:33.33%;
-                            padding: 15px;
-                        }
+                    code{<br>
+                            .columnn{<br>
+                                float:left;<br>
+                                width:33.33%;<br>
+                                padding: 15px;<br>
+                            }<br>
+                                
+                            .row::after{<br>
+                                content:"";<br>
+                                display:table;<br>
+                                clear:both;<br>
+                            }<br>
+        
+                            @mediascreen and (max-width: 600px){<br>
+                                .column{<br>
+                                width: 100%;<br>
+                            }<br>
+                        }<br>
+        
+                    &lt;style&gt; <br>
+                    
+                    
                         
-                        .row::after{
-                            content:"";
-                            display:table;
-                            clear:both;
-                        }
-
-                        @mediascreen and (max-width: 600px){
-                            .column{
-                                width: 100%;
-                            }
-
-                        }
 
 
                     }
