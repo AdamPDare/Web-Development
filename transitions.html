@@ -88,17 +88,16 @@
                 width: 100px;
                 height: 100px;
                 background: red;
-                transition: width 2s, height 4s;
+                position: relative;
+                animation: myFirst 5s linear 2s infinite alternate;
             }
-            .transitionBox:hover{
-                width: 300px;
-                height: 150px;
-                animation-name: example;
-                animation-duration: 10s;
-            }
-            @keyframes example{
-                from{background-color: red;}
-                to{background-color: yellow;}
+            
+            @keyframes myFirst{
+                0% {background-color: red;left: 0px; top: 0px;}
+                25% {background-color: yellow;left: 200px; top: 0px;}
+                50% {background-color: blue;left: 200px; top: 200px;}
+                75% {background-color: green;left: 0px; top: 200px;}
+                100% {background-color: red;left: 0px; top: 0px;}
             }
 
             
