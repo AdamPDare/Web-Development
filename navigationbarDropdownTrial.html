@@ -2,48 +2,109 @@
 <html>
     <html lang="en">
         <style>
+           *{
+                box-sizing: border-box;
+            }
+            code{
+                font-family: monospace;
+                color: chocolate;
+                
+            }
+        
+            
+            body{
+                margin: 0;
+            }
+            h1{
+                color:#66FCF1;
+                text-align: center;
+                font: bold 200% fantasy;
+            }
+            .header{
+                background-color: #0B0C10;
+                padding: 20px;
+                text-align: center;
+               
+            }
+            #grad1{
+                height: 200px;
+                background-color: aliceblue;
+                background-image: linear-gradient(#66FCF1,#0B0C10);
+            }
             ul{
-                list-style-type: none;
+                list-style-type:none;
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #333;
+                background-color: #0B0C10;
             }
             li{
                 float: left;
+                
+                border-right: 1px solid #66FCF1;
             }
             li a, .dropbtn{
                 display: inline-block;
-                color: white;
+                color: #66FCF1;
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
+                
+            }
+            li a:hover:not(.active){
+                border-bottom: 3px solid #66FCF1;
+                border-top: 2px solid #66FCF1;
+
             }
             li a:hover, .dropdown:hover .dropbtn{
-                background-color: red;
+                border-bottom: 3px solid #66FCF1;
             }
+
             li.dropdown{
-                display:inline-block;
+                display: inline-block;
             }
             .dropdown-content{
-                display:none;
-                position:absolute;
-                background-color: #f9f9f9;
+                display: none;
+                position: absolute;
+                background-color: #0B0C10;
                 min-width: 160px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index:1;
+                z-index: 1;
             }
             .dropdown-content a{
-                color: black;
+                color:#66FCF1;
                 padding: 12px 16px;
                 text-decoration: none;
                 display: block;
                 text-align: left;
             }
-            .dropdown-content a:hover{background-color: #f1f1f1;}
+            .dropdown-content a:hover{border-bottom: 2px #66FCF1;}
             .dropdown:hover .dropdown-content{
                 display: block;
             }
+            .column{
+                float: left;
+                width: 33.33%;
+                padding: 15px;
+                
+            }
+            .row::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            @media screen and (max-width: 600px) {
+                .Navigation a{
+                    float:none;
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                }
+                .column{
+                    width: 100%;
+                }
+            }
+
             #movedBox{
                 width: 300px;
                 height: 100px;
@@ -135,23 +196,31 @@
                 -ms-transform: scale(2,2);
                 transform: scale(2,2);
             }
+
           
 
         </style>
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1">
+        <title>My Page</title>
         <body>
+            <div class="header">
+                <h1>Adam Dare's Website</h1>
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pageStructure.html">Page Structure</a></li>
-                <li><a href="cssExternalTrial.html">CSS External Trial</a></li>
-                <li><a href="index.html">Class Elements</a></li>
-                <li><a href="columnsPage.html">Columns Page</a></li>
+                <li><a href="cssExternalTrial.html">CSS External File</a></li>
+                <li><a href="classElements.html">Class Elements</a></li>
+                <li><a href="form.html">Forms</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li class="dropdown">
-                    <a href="javascript:void(0)"
-                    class="dropbtn">dropdown</a>
+                    <a href="javascript:void(0)"class="dropbtn">DropDown</a>
                     <div class="dropdown-content">
-                        <a href="index.html">Link 1</a>
-                        <a href="pageStructure.html">Link 2</a>
-                        <a href="columnsPage.html">Link 3</a>
+                        <a href="navigationbarDropdownTrial.html">Transformations</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
                     </div>
                 </li>
             </ul>
