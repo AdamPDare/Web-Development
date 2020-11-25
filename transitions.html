@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <style>
-            
+
             *{
                 box-sizing: border-box;
             }
@@ -93,6 +93,12 @@
             .transitionBox:hover{
                 width: 300px;
                 height: 150px;
+                animation-name: example;
+                animation-duration: 10s;
+            }
+            @keyframes example{
+                from{background-color: red;}
+                to{background-color: yellow;}
             }
 
             
