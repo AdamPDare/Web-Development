@@ -2,7 +2,7 @@
 <html>
     <html lang="en">
         <style>
-           *{
+            *{
                 box-sizing: border-box;
             }
             code{
@@ -10,13 +10,18 @@
                 color: chocolate;
                 
             }
+            :root{
+                --main-bg-color:#0B0C10;
+                --txt-border-color:#66FCF1;
+            }
+            
         
             
             body{
                 margin: 0;
             }
             h1{
-                color:#66FCF1;
+                color: var(--txt-border-color);
                 text-align: center;
                 font: bold 200% fantasy;
             }
@@ -29,35 +34,35 @@
             #grad1{
                 height: 200px;
                 background-color: aliceblue;
-                background-image: linear-gradient(#66FCF1,#0B0C10);
+                background-image: linear-gradient(var(--txt-border-color),var(--main-bg-color));
             }
             ul{
                 list-style-type:none;
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #0B0C10;
+                background-color: var(--main-bg-color);
             }
             li{
                 float: left;
                 
-                border-right: 1px solid #66FCF1;
+                border-right: 1px solid var(--txt-border-color);
             }
             li a, .dropbtn{
                 display: inline-block;
-                color: #66FCF1;
+                color: var(--txt-border-color);
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
                 
             }
             li a:hover:not(.active){
-                border-bottom: 3px solid #66FCF1;
-                border-top: 2px solid #66FCF1;
+                border-bottom: 3px solid var(--txt-border-color);
+                border-top: 2px solid var(--txt-border-color);
 
             }
             li a:hover, .dropdown:hover .dropbtn{
-                border-bottom: 3px solid #66FCF1;
+                border-bottom: 3px solid var(--txt-border-color);
             }
 
             li.dropdown{
@@ -66,22 +71,117 @@
             .dropdown-content{
                 display: none;
                 position: absolute;
+                background-color: var(--main-bg-color);
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a{
+                color:var(--txt-border-color);
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content a:hover{border-bottom: var(--txt-border-color);}
+            .dropdown:hover .dropdown-content{
+                display: block;
+            }
+            
+
+
+
+
+            /*.Navigation{
+                width: 100%;
+                overflow: hidden;
+                background-color: #0B0C10;
+                
+            }
+            .Navigation a.active{
+                border-bottom: 3px #66FCF1;
+            }
+            
+
+            .Navigation a{
+                float:left;
+                display: block;
+                color: aqua;                
+                font-size: 17px;
+                width: 12.5%;
+               
+                text-align: center;
+                padding: 14px 16px;
+                border-bottom: 3px #66FCF1;
+                
+                text-decoration: none;
+                
+            }
+            .Navigation a:hover{
+                border-bottom: 3px solid aqua;
+                
+            }
+            .Navigation a.active{
+                border-bottom: 3px solid aqua;
+            }
+          
+
+
+            .dropbtn{
+                background-color: #0B0C10;
+                color: aqua;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+            .dropdown{
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content{
+                display:none;
+                position:absolute;
                 background-color: #0B0C10;
                 min-width: 160px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                 z-index: 1;
             }
             .dropdown-content a{
-                color:#66FCF1;
+                color: aqua;
                 padding: 12px 16px;
                 text-decoration: none;
-                display: block;
-                text-align: left;
+                display:block;
             }
-            .dropdown-content a:hover{border-bottom: 2px #66FCF1;}
+            .dropdown-content a:hover{background-color:#0B0C10}
             .dropdown:hover .dropdown-content{
                 display: block;
             }
+            .dropdown:hover .dropbtn{
+                border-bottom: 3px solid aqua;
+            }
+
+            /*ul{ Creates a vertical navigation bar
+                list-style-type: none;
+                margin: 0;
+                width: 200px;
+                background-color: #f1f1f1;
+
+            }
+            li a{
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover{
+                background-color: #555;
+                color: white;
+            }*/
+            
+
+            
             .column{
                 float: left;
                 width: 33.33%;
@@ -219,7 +319,7 @@
                     <a href="javascript:void(0)"class="dropbtn">DropDown</a>
                     <div class="dropdown-content">
                         <a href="navigationbarDropdownTrial.html">Transformations</a>
-                        <a href="#">Link 2</a>
+                        <a href="transitions.html">Transitions</a>
                         <a href="#">Link 3</a>
                     </div>
                 </li>
