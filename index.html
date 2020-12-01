@@ -3,28 +3,19 @@
 <html lang="en">
     <head>
         <style>
-            *{
-                box-sizing: border-box;
+            :root{
+                --main-bg-color:#0B0C10;
+                --txt-border-color:#66FCF1;
             }
             code{
                 font-family: monospace;
                 color: chocolate;
                 
             }
-            :root{
-                --main-bg-color:#0B0C10;
-                --txt-border-color:#66FCF1;
-            }
-            
-        
-            
+
             body{
                 margin: 0;
-            }
-            h1{
-                color: var(--txt-border-color);
-                text-align: center;
-                font: bold 200% fantasy;
+                
             }
             .header{
                 background-color: #0B0C10;
@@ -32,6 +23,22 @@
                 text-align: center;
                
             }
+            h1{
+                color: var(--txt-border-color);
+                text-align: center;
+                font: bold 200% fantasy;
+            }
+            *{
+                box-sizing: border-box;
+            }
+            
+            
+            
+        
+            
+            
+            
+            
             #grad1{
                 height: 200px;
                 background-color: aliceblue;
@@ -186,8 +193,14 @@
             .column{
                 float: left;
                 width: 33.33%;
-                padding: 15px;
+                padding: 20px;
+                background-color: #f1f1f1;
                 
+            }
+            .card{
+                background-color: white;
+                padding: 20px;
+                margin-top: 20px;
             }
             .row::after{
                 content: "";
@@ -209,8 +222,9 @@
                 }
             }
             .footer{
+                padding: 20px;
                 background-color: #f1f1f1;
-                padding: 10px;
+                margin-top: 20px;
                 text-align: center;
             }
         </style>
@@ -288,7 +302,8 @@
         
         <div class="row">
             <div class="column">
-                <h2>Creating reactive Columns</h2>
+                <div class="card">
+                    <h2>Creating reactive Columns</h2>
                 <p>To create three reactive equal columns, on this webpage, I 
                     set the width of each column to 33.33% and to cover 100%
                     of the width. Furthermore, I used the @media screen feature
@@ -322,27 +337,39 @@
             width: 100%;
         }
     }
-        
-        
-            
-    
-
-
 </pre>
                     &lt;style&gt;<br>
                 
-                </code>    
+                </code>
+
+                <code>
+                    &lt;h3&gt;Code Extract&lt;/h3&gt;<br>
+                    &lt;style&gt;<br>
+                </code>
+
+                </div>
+                
+                
+   
                 
             </div>
 
             <div class="column">
-                <h2>Column 2</h2>
-                <p>This is column 2</p>
+                <div class="card">
+                    <h2>Column 2</h2>
+                    <p>This is column 2</p>
+
+                </div>
+                
             </div>
 
             <div class="column">
-                <h2>Column 3</h2>
-                <p>This is column 3</p>
+                <div class="card">
+                    <h2>Column 3</h2>
+                    <p>This is column 3</p>
+
+                </div>
+                
             </div>
         </div>
         <!--... This is the what will appear on the website-->
