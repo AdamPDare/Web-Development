@@ -250,12 +250,18 @@
                 display: table;
                 clear: both;
             }
-            @media screen and (max-width: 750px) {
-                .Navigation a{
+            @media screen and (max-width: 1200px) {
+                .HiddenNav{
                     float:none;
                     display: block;
                     width: 100%;
                     text-align: left;
+                }
+                .overlay{
+                    display:none;
+                }
+                span{
+                    display: none;
                 }
                 .column{
                     width: 100%;
@@ -265,8 +271,16 @@
                     width: 100%;
                 }
             }
-            @media screen and (max-width: 350px){
-                
+            @media screen and (max-width: 800px){
+                .HiddenNav{
+                    display:none;
+                }
+                .overlay{
+                    display:block;
+                }
+                span{
+                    display: block;
+                }
                 .overlay {overflow-y: auto;}
                 .overflow a {font-size: 20px}
                 .overflow .closebtn{
@@ -301,22 +315,26 @@
             <h1>Adam Dare's Website</h1>
             <img src="destiny profile picture.png" width="100px" height="100px">
         </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pageStructure.html">Page Structure</a></li>
-            <li><a href="cssExternalTrial.html">CSS External File</a></li>
-            <li><a href="classElements.html">Class Elements</a></li>
-            <li><a href="form.html">Forms</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)"class="dropbtn">DropDown</a>
-                <div class="dropdown-content">
-                    <a href="navigationbarDropdownTrial.html">Transformations</a>
-                    <a href="transitions.html">Transitions</a>
-                    <a href="columnsPage.html">Columns page</a>
-                </div>
-            </li>
-        </ul>
+        <div class="HiddenNav">
+                <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pageStructure.html">Page Structure</a></li>
+                        <li><a href="cssExternalTrial.html">CSS External File</a></li>
+                        <li><a href="classElements.html">Class Elements</a></li>
+                        <li><a href="form.html">Forms</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)"class="dropbtn">DropDown</a>
+                            <div class="dropdown-content">
+                                <a href="navigationbarDropdownTrial.html">Transformations</a>
+                                <a href="transitions.html">Transitions</a>
+                                <a href="columnsPage.html">Columns page</a>
+                            </div>
+                        </li>
+                    </ul>
+
+        </div>
+        
 
         <div id="CurtainNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -331,8 +349,9 @@
                 <a href="transitions.html">Transitions</a>
                 <a href="columnsPage.html">Columns page</a>
             </div>
+            
         </div>
-        <span style="font-size:30px;color:aqua;cursor:pointer" onclick="openNav()">&#9776; navigation</span>
+        <span style="font-size:30px;color:aqua;cursor:pointer" onclick="openNav()">&#9776; Navigation</span>
         <script>
             function openNav(){
                 document.getElementById("CurtainNav").style.height="100%";
