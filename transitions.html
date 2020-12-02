@@ -113,6 +113,22 @@
                 from{top: 0px; background-color: yellow;}
                 to{top: 300px; background-color: blue;}
             }
+
+            .animationDownTwo{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                animation-name: down;
+                animation-duration: 5s;
+                animation-delay: 5s;
+                animation-fill-mode: forwards;
+            }
+            @keyframes down{
+                from{top: 0px; background-color: yellow;}
+                to{top: 400px; background-color: blue;}
+            }
+
             #transitionBox{
                 width:100px;
                 height:100px;
@@ -189,6 +205,9 @@
             <div class="column">
                 <div class="animationDown">
 
+                </div>
+                <div class="animationDownTwo">
+                    
                 </div>
 
                
