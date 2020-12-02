@@ -10,7 +10,7 @@
             code{
                 font-family: monospace;
                 color: chocolate;
-                object-fit:cover ;
+                
             }
 
             body{
@@ -102,6 +102,36 @@
             .dropdown-content a:hover{border-bottom: var(--txt-border-color);}
             .dropdown:hover .dropdown-content{
                 display: block;
+            }
+
+            .overlay{
+                height: 0%;
+                width: 100%;
+                position:fixed;
+                z-index: 1;
+                top:0;
+                left: 0;
+                background-color: rgb(0,0,0);
+                background-color: rgb(0,0,0,0.9);
+                overflow-y: hidden;
+                transition:0.5s;
+            }
+            .overlay a{
+                padding: 8px;
+                text-decoration: none;
+                font-size: 36px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+            .overlay a:hover, .overlay a:focus{
+                color: var(--txt-border-color);
+            }
+            .overlay .closebtn{
+                position: absolute;
+                top: 20px;
+                right: 45px;
+                font-size: 60px;
             }
             
 
@@ -235,6 +265,16 @@
                     width: 100%;
                 }
             }
+            @media screen and (max-width: 350px){
+                
+                .overlay {overflow-y: auto;}
+                .overflow a {font-size: 20px}
+                .overflow .closebtn{
+                    font-size: 40px;
+                    top: 15px;
+                    right: 35px;
+                }
+            }
             .footer{
                 color: var(--txt-border-color);
                 padding: 20px;
@@ -269,6 +309,30 @@
                 </div>
             </li>
         </ul>
+
+        <div id="CurtainNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="pageStructure.html">Page Structure</a>
+                <a href="cssExternalTrial.html">CSS External File</a>
+                <a href="classElements.html">Class Elements</a>
+                <a href="form.html">Forms</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="navigationbarDropdownTrial.html">Transformations</a>
+                <a href="transitions.html">Transitions</a>
+                <a href="columnsPage.html">Columns page</a>
+            </div>
+        </div>
+        <span style="font-size:30px;color:aqua;cursor:pointer" onclick="openNav()">&#9776; navigation</span>
+        <script>
+            function openNav(){
+                document.getElementById("CurtainNav").style.height="100%";
+            }
+            function closeNav() {
+  document.getElementById("CurtainNav").style.height = "0%";
+}
+        </script>
         
        
         <!----<div class="Navigation">
