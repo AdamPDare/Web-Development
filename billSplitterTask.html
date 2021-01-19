@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="cssTipCalculator.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="container">
+            <h1>Bill Splitter</h1>
+            <div id="calculator">
+                <form>
+                    <p>How much was your bill?</p>
+                    $<input id="billamt" type="Bill Amount">
+                    <p>Tip Rate</p>
+                    <select id="serviceQual">
+                        <option disabled selected value="0">--Choose a Tip Rate--</option>
+                        <option value="0.2">20 &#37;&#45; Brilliant</option>
+                        <option value="0.15">15 &#37;&#45; Decent</option>
+                        <option value="0.1">10 &#37;&#45; Ok</option>
+                        <option value="0.05">5 &#37;&#45; Meh</option>
+                    </select>
+
+                </form>
+                <p>How many people are sharing the bill?</p>
+                <input id="peopleamt"type="text" placeholder="Number of People">people
+                <button type="button" id="calculate">Calculate!</button>
+                <div id="totalTip">
+                    <sup>$</sup><span id="tip">0.00</span>
+                    <small id="each">each</small>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="changeLing.js"></script>
+    </body>
+</html>
