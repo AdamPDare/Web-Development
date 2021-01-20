@@ -126,4 +126,7 @@ button:active {
   display: block;
 }
 
+.intro col-12, .helpText col-12{
+  text-align: center;
+}
 
