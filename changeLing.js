@@ -33,6 +33,9 @@ function checkCookie() {
   }
 }
 
+function openMenu(){
+  window.open("Menu.jpg")
+}
 
 //Calculate Tip
 function calculateTip() {
