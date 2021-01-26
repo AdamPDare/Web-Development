@@ -4,7 +4,7 @@
         <link href="cssTipCalculator.css" rel="stylesheet">
 
     </head>
-    <body>
+    <body onload="checkCookie()">
         <div class="cotainerItems">
             <div class="row">
                 <div class="listStyle">
@@ -27,10 +27,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-                <input id="userInput" type="text" placeholder="Add new Menu items" maxlength="27">
-                <button id="enter"><i class="fas fa-pencil-alt"></i></button>
+            <div class="listStyle">
+                <div class="col-12">
+                    <input id="userInput" type="text" placeholder="Add new Menu items" maxlength="27">
+                    <button id="enter"><i class="fas fa-pencil-alt"></i></button>
+                </div>
             </div>
+            
         </div>
 
         <div class="row">
