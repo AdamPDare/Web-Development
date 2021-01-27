@@ -1,3 +1,8 @@
+var CheesyRolls = 7.00; 
+var ChipDip = 4.00;
+var OnionRings = 5.00;
+var BackPotato = 6.50;
+
 function setCookie(cname,cvalue,exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -37,6 +42,9 @@ function openMenu(){
   window.open("Menu.jpg")
 }
 
+function calculateBill(){
+  
+}
 //Calculate Tip
 function calculateTip() {
     var billAmt = document.getElementById("billamt").value;

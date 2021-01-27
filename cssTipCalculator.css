@@ -127,9 +127,14 @@ p {
 }
 
 form input[type="text"] {
-  width=90px;
+  width:90px;
 }
 
+.size{
+  height: 30px;
+  width: 2px;
+  margin: 10px;
+}
 input {
   padding-left: 20px;
 }
