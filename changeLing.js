@@ -1,7 +1,7 @@
 var CheesyRolls = 7.00; 
 var ChipDip = 4.00;
 var OnionRings = 5.00;
-var BackPotato = 6.50;
+var BakedPotato = 6.50;
 
 function setCookie(cname,cvalue,exdays) {
   var d = new Date();
@@ -43,6 +43,27 @@ function openMenu(){
 }
 
 function calculateBill(){
+  var TotalBill=0.00;
+  var items= [document.getElementById("col-12 offset-0 col-sm-8 offsent-sm-2").value];
+  var arrayLength =items.length;
+  for(var i =0; i<arrayLength;i++){
+    console.log(myStringArray[i]);
+    if(items==="Cheesy Roll".toLowerCase){
+      TotalBill=TotalBill+CheesyRolls;
+    }
+    else if(items==="Chip & Dip".toLowerCase){
+      TotalBill=TotalBill+ChipDip;
+    }
+    else if(items==="Onion Rings".toLowerCase){
+      TotalBill=TotalBill+OnionRings;
+    }
+    else if(items==="Baked Potato".toLowerCase){
+      TotalBill=TotalBill+BakedPotato;
+    }
+
+  }
+  alert(TotalBill);
+  
   
 }
 //Calculate Tip
