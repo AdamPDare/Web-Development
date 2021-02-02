@@ -54,7 +54,18 @@
                 right: 20px;
             }
 
-            
+            #animationContainer{
+                width: 400px;
+                height: 400px;
+                position: relative;
+                background: yellow;
+            }
+            #animate{
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background-color: red;
+            }
 
         </style>
         
@@ -79,6 +90,7 @@
                 </div>
             </body>
         </div>
+        <button onclick="getLocation()">Location Getter</button>
         
         <h2>Javascript Trial</h2>
         
@@ -98,6 +110,13 @@
         
         <p id="text1"></p>
         <p id="text2"></p>
+
+        <p><button onclick="myMove()">Click Me</button></p>
+        <div id="container">
+            <div id="animate"></div>
+        </div>
+
+        <p id="pixels"></p>
 
 
         <script>
@@ -125,13 +144,13 @@
             document.getElementById("date").innerHTML = date;
     
             var time = setTimeout(function(){ startTime() }, 500);
-        }
-        function checkTime(i) {
-            if (i < 10) {
-                i = "0" + i;
             }
-            return i;
-        }
+                function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
 
         
         
@@ -141,6 +160,36 @@
             }
             document.write(15+15);
             console.log(5+6);
+
+            function myMove(){
+                var elem = document.getElementById("animate");
+                var pos =0;
+                var id = setInterval(frame, 5);
+                function frame(){
+                    if(pos == 350){
+                        clearInterval(id);
+                    }
+                    else{
+                        pos++;
+                        elem.style.top=pos+"px";
+                        elem.style.left = pos +"px";
+                    }
+                }
+            }
+
+            document.getElementById("pixels").innerHTML="Screen Pixel Depth is"+ screen.pixelDepth;
+
+            function getLocation(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }
+                else{
+                    x.innerHTML="Geolocation is not supported in this browser";
+                }
+            }
+            function showPosition(position){
+                x.innerHTML="Latitude"+position.coords.latitude+"<br>Loingitude:"+position.coords.longitude;
+            }
 
             
 
