@@ -37,7 +37,7 @@
         <p id="deleteElement2"></p>
 
         <h3>Array Splicing</h3>
-        <button onclick="arraySplice">Array Splice</button>
+        <button onclick="arraySplice()">Array Splice</button>
         <p id="arraySplice1"></p>
         <p id="arraySplice2"></p>
         <p id="arraySplice3"></p>
@@ -77,6 +77,9 @@
             document.getElementById("deleteElement").innerHTML="The first fruit is:"+fruits[0];
             delete fruits[0];
             document.getElementById("deleteElement2").innerHTML="The first fruit is:"+fruits[0];
+
+            
+            document.getElementById("arraySplice1").innerHTML = "Original Array:<br> " + f1Teams;
 
             function arraySplice(){
                 var removed = f1Teams.splice(2,2, "Mercedes","Red Bull");
