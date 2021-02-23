@@ -12,5 +12,19 @@
         <button onkeydown="this.innerHTML=Date()">The time is?</button>
         <button onload="this.innerHTML=Date()">The time is?</button>
         <button onchange="this.innerHTML=Date()">The time is?</button>
+
+        <h2>JavaScript Array Methods</h2>
+        <h3>Array to string</h3>
+        <p id="arrayToString"></p>
+        <h3>Array pop()</h3>
+        <p id="popArray"></p>
+
+        <script>
+            var f1Teams =["Mercedes","Aston Martin","Red Bull","Mclaren"];
+            document.getElementById("arrayToString").innerHTML = f1Teams.toString();
+            f1Teams.pop();
+            document.getElementById("popArray").innerHTML=f1Teams;
+
+        </script>
     </body>
 </html>
