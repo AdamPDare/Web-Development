@@ -29,6 +29,17 @@
         <h3>Changing Array values</h3>
         <p id="changingArrayValues"></p>
         <p id="changingArrayValues2"></p>
+        <button onclick="appendTo()">Add to Array</button>
+        <p id="addToArray"></p>
+
+        <h3>Deleting Elements</h3>
+        <p id="deleteElement"></p>
+        <p id="deleteElement2"></p>
+
+        <h3>Array Splicing</h3>
+        <p id="arraySplice1"></p>
+        <p id="arraySplice2"></p>
+        <p id="arraySplice3"></p>
 
         <script>
             var f1Teams =["Mercedes","Aston Martin","Red Bull","Mclaren"];
@@ -51,11 +62,21 @@
             document.getElementById("unshiftArray").innerHTML=countries2;
             countries2.unshift("Northern Ireland");
             document.getElementById("unshiftArray").innerHTML=countries2;
-            
+
             var fruits = ["Banana", "Orange", "Apple", "Mango"];
             document.getElementById("changingArrayValues").innerHTML = fruits;
             fruits[0] = "Kiwi";
             document.getElementById("changingArrayValues2").innerHTML = fruits;
+
+            function addToArray(){
+                fruits[fruits.length]="Lemon";
+                document.getElementById("addToArray").innerHTML=fruits;
+            }
+
+            document.getElementById("deleteElement").innerHTML="The first fruit is:"+fruits[0];
+            delete fruits[0];
+            document.getElementById("deleteElement2").innerHTML="The first fruit is:"+fruits[0];
+
 
 
         </script>
