@@ -42,6 +42,13 @@
         <p id="arraySplice2"></p>
         <p id="arraySplice3"></p>
 
+        <h3>Merging Arrays</h3>
+        <p id="mergingArrays"></p>
+
+        <h3>Sorting Arrays</h3>
+        <button onclick="sortArrays()">Sort array</button>
+        <p id="sortedArray"></p>
+
         <script>
             var f1Teams =["Mercedes","Aston Martin","Red Bull","Mclaren"];
             document.getElementById("arrayToString").innerHTML = f1Teams.toString();
@@ -85,6 +92,17 @@
                 var removed = f1Teams.splice(2,2, "Alfa Romeo","Williams");
                 document.getElementById("arraySplice2").innerHTML="New Array:<br>"+f1Teams;
                 document.getElementById("arraySplice3").innerHTML="Removed Items:<br>"+removed;
+            }
+
+            var combinedArray = f1Teams.concat(fruits);
+            document.getElementById("mergingArrays").innerHTML=combinedArray;
+
+            document.getElementById("sortedArray").innerHTML=f1Teams;
+
+
+            function sortArrays(){
+                f1Teams.sort();
+                document.getElementId("sortedArray").innerHTML=f1Teams;
             }
 
 
