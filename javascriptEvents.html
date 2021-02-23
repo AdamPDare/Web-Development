@@ -26,6 +26,10 @@
         <h4>Array Unshift</h4>
         <p id="unshiftArray"></p>
 
+        <h3>Changing Array values</h3>
+        <p id="changingArrayValues"></p>
+        <p id="changingArrayValues2"></p>
+
         <script>
             var f1Teams =["Mercedes","Aston Martin","Red Bull","Mclaren"];
             document.getElementById("arrayToString").innerHTML = f1Teams.toString();
@@ -47,6 +51,12 @@
             document.getElementById("unshiftArray").innerHTML=countries2;
             countries2.unshift("Northern Ireland");
             document.getElementById("unshiftArray").innerHTML=countries2;
+            
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("changingArrayValues").innerHTML = fruits;
+            fruits[0] = "Kiwi";
+            document.getElementById("changingArrayValues2").innerHTML = fruits;
+
 
         </script>
     </body>
