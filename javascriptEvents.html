@@ -18,12 +18,28 @@
         <p id="arrayToString"></p>
         <h3>Array pop()</h3>
         <p id="popArray"></p>
+        <h3>Array Push</h3>
+        <button onclick="addElement()">Add Element</button>
+        <p id="pushArray"></p>
+        <h3>Array Shift</h3>
+        <p id="shiftArray"></p>
 
         <script>
             var f1Teams =["Mercedes","Aston Martin","Red Bull","Mclaren"];
             document.getElementById("arrayToString").innerHTML = f1Teams.toString();
             f1Teams.pop();
             document.getElementById("popArray").innerHTML=f1Teams;
+          
+            document.getElementById("pushArray").innerHTML=f1Teams;
+            function addElement(){
+                f1Teams.push("Alpine");
+                document.getElementById("arrayToString").innerHTML=f1Teams;
+            }
+
+            var countries=["England","Scotland","Wales","Ireland"];
+            document.getElementById("shiftArray").innerHTML=countries;
+            countries.shift();
+            document.getElementById("shiftArray").innerHTML=countries;
 
         </script>
     </body>
