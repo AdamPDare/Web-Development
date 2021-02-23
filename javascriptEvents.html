@@ -23,6 +23,8 @@
         <p id="pushArray"></p>
         <h3>Array Shift</h3>
         <p id="shiftArray"></p>
+        <h4>Array Unshift</h4>
+        <p id="unshiftArray"></p>
 
         <script>
             var f1Teams =["Mercedes","Aston Martin","Red Bull","Mclaren"];
@@ -40,6 +42,11 @@
             document.getElementById("shiftArray").innerHTML=countries;
             countries.shift();
             document.getElementById("shiftArray").innerHTML=countries;
+
+            var countries2 = ["England","Scotland","Wales","Ireland"];
+            document.getElementById("unshiftArray").innerHTML=countries2;
+            countries2.unshift("Northern Ireland");
+            document.getElementById("unshiftArray").innerHTML=countries2;
 
         </script>
     </body>
