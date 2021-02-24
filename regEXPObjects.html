@@ -9,10 +9,20 @@
         <h2>Javascript string methods</h2>
         <p>Search a string for "W3Schools", and display the position of the match:</p>
         <p id="search"></p>
+        <h3>Regular Expression</h3>
+        <p>Replacing Mercedes with Mclaren</p>
+        <button onclick="replaceMM()"
+        <p id="replace">Mercedes is better than Aston Martin</p>
        <script>
            var str = "Visit W3Schools!"; 
            var n = str.search("W3Schools");
            document.getElementById("search").innerHTML = n;
+
+           function replaceMM(){
+               var str=document.getElementById("replace").innerHTML;
+               var txt = str.replace(/mercedes/i,"Mclaren");
+               document.getElementById("replace").innerHTML=txt;
+           }
 
        </script>
 

@@ -48,9 +48,11 @@
         <h3>Sorting Arrays</h3>
         <button onclick="sortArrays()">Sort array</button>
         <p id="sortedArray"></p>
+
         <h4>Numeric Sort</h4>
-        <button onclick="numericSort">Numeric sort</button>
+        <button onclick="numericSort()">Numeric sort</button>
         <p id="numberSort"></p>
+
         <h4>Compare sort</h4>
         <button onclick="compare1()">Sort Alphabetically</button>
         <button onclick="compare2()">Sort Numerically</button>
@@ -131,16 +133,17 @@
                 document.getElementById("numberSort").innerHTML=points;
             }
 
-            var points = [40, 100, 1, 5, 25, 10];
-            document.getElementById("compare").innerHTML = points;  
+            var points2 = [40, 100, 1, 5, 25, 10];
+            document.getElementById("compare").innerHTML = points2;  
 
             function compare1() {
-                points.sort();
-                document.getElementById("compare").innerHTML = points;
+                points2.sort();
+                document.getElementById("compare").innerHTML = points2;
             }
+            
             function compare2() {
-                points.sort(function(a, b){return a - b});
-                document.getElementById("compare").innerHTML = points;
+                points2.sort(function(a, b){return a - b});
+                document.getElementById("compare").innerHTML = points2;
             }
 
             var txt = "";
