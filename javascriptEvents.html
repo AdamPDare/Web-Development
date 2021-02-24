@@ -48,6 +48,13 @@
         <h3>Sorting Arrays</h3>
         <button onclick="sortArrays()">Sort array</button>
         <p id="sortedArray"></p>
+        <h4>Numeric Sort</h4>
+        <button onclick="numericSort">Numeric sort</button>
+        <p id="numberSort"></p>
+        <h4>Compare sort</h4>
+        <button onclick="compare1()">Sort Alphabetically</button>
+        <button onclick="compare2()">Sort Numerically</button>
+        <p id="compare"></p>
 
         <script>
             var f1Teams =["Mercedes","Aston Martin","Red Bull","Mclaren"];
@@ -104,7 +111,27 @@
 
         function sortArrays() {
             fruits2.sort();
+            fruits2.reverse();
             document.getElementById("demo").innerHTML = fruits2;
+        }
+
+        var points =[40,100,1,25,10];
+        document.getElementById("numberSort").innerHTML.points;
+        function numericSort(){
+            points.sort(function(a,b){return a-b});
+            document.getElementById("numberSort").innerHTML=points;
+        }
+
+        var points = [40, 100, 1, 5, 25, 10];
+        document.getElementById("compare").innerHTML = points;  
+
+        function compare1() {
+            points.sort();
+            document.getElementById("compare").innerHTML = points;
+        }
+        function compare2() {
+            points.sort(function(a, b){return a - b});
+            document.getElementById("compare").innerHTML = points;
         }
 
 
