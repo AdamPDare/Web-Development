@@ -2,6 +2,33 @@
 <html lang="en">
     <head>
         <style>
+            input[type=text], select{
+                width:100%;
+                padding:12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+
+            }
+            input[type=submit]{
+                width:100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type=submit]:hover{
+                background-color: #45a049;
+            }
+            div{
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
 
         </style>
     </head>
@@ -21,6 +48,10 @@
 
         <h3>Exec()</h3>
         <p id="count"></p>
+
+        <label for="postcode">Postcode</label>
+        <input type="text" id="Postcode" name="ukPostcode" placeholder="Postocode..">
+        <input type="submit" value="Submit" onclick="isValidPostcode()">
        <script>
            var str = "Visit W3Schools!"; 
            var n = str.search("W3Schools");
@@ -37,6 +68,8 @@
             var obj = /T/.exec("The thirty-three thieves thought that they thrilled the throne throughout Thursday");
             document.getElementById("count").innerHTML =
             "Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+
+            
 
             
 
