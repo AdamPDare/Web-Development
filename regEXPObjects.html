@@ -9,10 +9,18 @@
         <h2>Javascript string methods</h2>
         <p>Search a string for "W3Schools", and display the position of the match:</p>
         <p id="search"></p>
-        <h3>Regular Expression</h3>
+        <h3>Replace Expression</h3>
         <p>Replacing Mercedes with Mclaren</p>
-        <button onclick="replaceMM()"
+        <button onclick="replaceMM()">Replace</button>
         <p id="replace">Mercedes is better than Aston Martin</p>
+
+        <h3>Test()</h3>
+        <p>Searches for the letter "T"</p>
+        <p id="p01">The thirty-three thieves thought that they thrilled the throne throughout Thursday</p>
+        <p id="test"></p>
+
+        <h3>Exec()</h3>
+        <p id="count"></p>
        <script>
            var str = "Visit W3Schools!"; 
            var n = str.search("W3Schools");
@@ -22,7 +30,15 @@
                var str=document.getElementById("replace").innerHTML;
                var txt = str.replace(/mercedes/i,"Mclaren");
                document.getElementById("replace").innerHTML=txt;
-           }
+            }
+
+            text=document.getElementById("p01").innerHTML;
+            document.getElementById("test").innerHTML=/t/.test(text);
+            var obj = /T/.exec("The thirty-three thieves thought that they thrilled the throne throughout Thursday");
+            document.getElementById("count").innerHTML =
+            "Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+
+            
 
        </script>
 
