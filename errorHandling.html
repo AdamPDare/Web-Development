@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <p>Please enter a number between 5 and 10:</p>
+        <input id="numbers" type="text">
+        <button type="button" onclick="checkNum()">Test Input</button>
+        <p id="p01"></p>
+
+        <p id="range"></p>
+        <script>
+            function checkNum(){
+                var message, x;
+                message=document.getElementById("p01");
+                message.innerHTML="";
+                x=document.getElementById("numbers").value;
+                try{
+                    if(x=="") throw "is empty";
+                    if(isNaN(x)) throw "is not a number";
+                    x=Number(x);
+                    if(x>10) throw "is too high";
+                    if(x<5) throw "is too low";
+                }
+                catch(err){
+                    message.innerHTML="Input "+err;
+                }
+                finally{
+                    document.getElementById("numbers").value="";
+                }
+            }
+
+            var num = 1;
+            try{
+                num.toPrecision(500);
+            }
+            catch(err){
+                document.getElementById("range").innerHTML=err.name;
+            }
+
+        </script>
+
+    </body>
+</html>
