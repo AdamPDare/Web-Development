@@ -50,8 +50,9 @@
         <p id="count"></p>
 
         <label for="postcode">Postcode</label>
+        <form name="ukPostcodeForm" onsubmit="isValidPostcodeForm()" method="post"></form>
         <input type="text" id="Postcode" name="ukPostcode" placeholder="Postocode..">
-        <input type="submit" value="Submit" onclick="isValidPostcode()">
+        <input type="submit" value="Submit">
        <script>
            var str = "Visit W3Schools!"; 
            var n = str.search("W3Schools");
@@ -69,11 +70,74 @@
             document.getElementById("count").innerHTML =
             "Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
 
+
+            function isValidPostcodeForm(){
+                var x=document.forms["ukPostcodeForm"]["Postcode"].value;
+                var pc="foo, bar, BS3 1PZ"
+
+                if(["foo","bar", "BS3 1PZ"].exists(shorternPostcode(x))){
+                    alert("Postcode in list. No checking needed")
+                    alert("Formatted postcode"+ formatPostcode(x))
+                    alert("Shorterned Postcode"+ shorternPostcode(x))
+
+                }
+                else{
+                    if(isValidPostcode(x)){
+                        if(["foo", "bar", "BS3 1PZ"].exists(shorternPostcode(x))){
+                            alert("In list")
+                            alert("Formatted postcode"+ formatPostcode(x))
+                            alert("Shortened postcode"+ shorternPostcode(x))
+                        }
+                        else{
+                            alert("Not in list")
+                            alert("Formatted postcode"+ formatPostcode(x))
+                            alert("Shorterned Postcode"+ shorternPostcode(x))
+                        }
+                    }
+                    else{
+                        alert("Not a valid postcode");
+                    }
+                }
             
+            }
+
+            function isValidPostcode(p){
+                var poscodeRegEx = /[A-Z]{1,2}[0-9]{1,2}[A-Z]{0,1} ?[0-9][A-Z]{2}/i;
+                return poscodeRegEx(p);
+            }
+            function formatPostcode(p) {
+                if (isValidPostcode(p)) {
+                        var postcodeRegEx = /(^[A-Z]{1,2}[0-9]{1,2})([0-9][A-Z]{2}$)/i;
+                        return p.replace(postcodeRegEx,"$1 $2");
+                        return 
+                } else {
+                    return p;
+                }
+            }
+    
+            function shortenPostcode(p) {
+                    if (isValidPostcode(p)) {
+                        var postcodeRegEx = /(^[A-Z]{1,2}[0-9]{1,2})([0-9][A-Z]{2}$)/i;
+                        return p.replace(postcodeRegEx,"$1");
+                        return 
+                } else {
+                        return p;
+                }
+            }
+    
+    Array.prototype.exists = function(search){
+      for (var i=0; i<this.length; i++)
+        if (this[i] == search) return true;
+            
+      return false;
+    } 
+
 
             
 
-       </script>
+            
+
+    </script>
 
     </body>
 </html>
